@@ -1,6 +1,7 @@
 #В конструкторе будет выполняться инициализация
 from selenium import webdriver
 from fixture.session import SessionHelper
+from fixture.projects import ProjectHelper
 
 
 class Application:
@@ -14,6 +15,7 @@ class Application:
         else:
             raise ValueError("Unrecognized browser %s" % browser)
         self.session = SessionHelper(self)
+        self.projects = ProjectHelper(self)
         self.base_url = base_url
 
     def is_valid(self):
