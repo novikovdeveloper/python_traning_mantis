@@ -48,17 +48,3 @@ class ProjectHelper:
         self.change_field_value("description", project.description)
 
     project_cache = None
-
-#    def get_project_list(self):
-#        if self.project_cache is None:
-#            wd = self.app.wd
-#            self.open_project_page()
-#            self.project_cache = []
-#            n = 1
-#            for element in wd.find_elements_by_xpath("/html/body/table[3]/tbody//tr"):
-#                if n > 2:
-#                    name = element.find_element_by_xpath("//tbody/tr[n]/td[1]/a").text
-#                    description = element.find_element_by_xpath("//tbody/tr[n]/td[5]").text
-#                    self.project_cache.append(Project(name=name, description=description))
-#                n += 1
-#        return list(self.project_cache)
